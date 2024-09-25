@@ -1,0 +1,200 @@
+{
+  "info": {
+    "name": "Event API",
+    "description": "Postman collection for CRUD operations on Event API using form-data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Events",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/events",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Event by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/events/:id",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "events",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "PUT_EVENT_ID_HERE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Event",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Sample Event",
+              "type": "text"
+            },
+            {
+              "key": "location",
+              "value": "New York",
+              "type": "text"
+            },
+            {
+              "key": "location_url",
+              "value": "https://example.com/location",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "2024-09-30",
+              "type": "text"
+            },
+            {
+              "key": "start_time",
+              "value": "10:00 AM",
+              "type": "text"
+            },
+            {
+              "key": "tags",
+              "value": "workshop,tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "path/to/your/image.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/events",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Event",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Updated Event Title",
+              "type": "text"
+            },
+            {
+              "key": "location",
+              "value": "San Francisco",
+              "type": "text"
+            },
+            {
+              "key": "location_url",
+              "value": "https://example.com/updated-location",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "2024-10-01",
+              "type": "text"
+            },
+            {
+              "key": "start_time",
+              "value": "2:00 PM",
+              "type": "text"
+            },
+            {
+              "key": "tags",
+              "value": "conference,tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "path/to/your/updated-image.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/events/:id",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "events",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "PUT_EVENT_ID_HERE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Event",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/events/:id",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "events",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "PUT_EVENT_ID_HERE"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
